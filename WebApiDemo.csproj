@@ -57,9 +57,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WebApi.Common\WebApi.Common.csproj" />
-    <ProjectReference Include="..\WebApi.Services\WebApi.Services.csproj" />
     <ProjectReference Include="WebApi.Extention\WebApi.Extention.csproj" />
+    <ProjectReference Include="WebApi.IServices\WebApi.IServices.csproj" />
+    <ProjectReference Include="WebApi.Services\WebApi.Services.csproj" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>

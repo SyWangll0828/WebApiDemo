@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi.Model</name>
+    </assembly>
+    <members>
+        <member name="P:WebApi.Model.Student.StuNo">
+            <summary>
+            学号
+            </summary>
+        </member>
+        <member name="P:WebApi.Model.Student.Grage">
+            <summary>
+            年级
+            </summary>
+        </member>
+        <member name="P:WebApi.Model.Student.Major">
+            <summary>
+            专业
+            </summary>
+        </member>
+    </members>
+</doc>
