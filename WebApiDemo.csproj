@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>..\WebApiDemo.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Redis\**" />
+    <Compile Remove="WebApi.Common\**" />
+    <Compile Remove="WebApi.Extention\**" />
+    <Compile Remove="WebApi.IServices\**" />
+    <Compile Remove="WebApi.Model\**" />
+    <Compile Remove="WebApi.Services\**" />
+    <Compile Remove="WebApiCL\**" />
+    <Content Remove="Redis\**" />
+    <Content Remove="WebApi.Common\**" />
+    <Content Remove="WebApi.Extention\**" />
+    <Content Remove="WebApi.IServices\**" />
+    <Content Remove="WebApi.Model\**" />
+    <Content Remove="WebApi.Services\**" />
+    <Content Remove="WebApiCL\**" />
+    <EmbeddedResource Remove="Redis\**" />
+    <EmbeddedResource Remove="WebApi.Common\**" />
+    <EmbeddedResource Remove="WebApi.Extention\**" />
+    <EmbeddedResource Remove="WebApi.IServices\**" />
+    <EmbeddedResource Remove="WebApi.Model\**" />
+    <EmbeddedResource Remove="WebApi.Services\**" />
+    <EmbeddedResource Remove="WebApiCL\**" />
+    <None Remove="Redis\**" />
+    <None Remove="WebApi.Common\**" />
+    <None Remove="WebApi.Extention\**" />
+    <None Remove="WebApi.IServices\**" />
+    <None Remove="WebApi.Model\**" />
+    <None Remove="WebApi.Services\**" />
+    <None Remove="WebApiCL\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.16" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="3.1.19" />
+    <PackageReference Include="Microsoft.DotNet.PlatformAbstractions" Version="3.1.6" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="NHibernate" Version="5.3.12" />
+    <PackageReference Include="ServiceStack" Version="5.14.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="6.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.20.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebApi.Common\WebApi.Common.csproj" />
+    <ProjectReference Include="..\WebApi.Services\WebApi.Services.csproj" />
+    <ProjectReference Include="WebApi.Extention\WebApi.Extention.csproj" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+
+</Project>
