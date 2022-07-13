@@ -30,7 +30,7 @@ namespace WebApiDemo.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Authorize(Policy = "Admin")]
+        [Authorize(Policy = "Admin2")]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();

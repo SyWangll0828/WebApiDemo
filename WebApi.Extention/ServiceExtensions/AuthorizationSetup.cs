@@ -30,8 +30,17 @@ namespace WebApi.Extention.ServiceExtensions
                 //options.AddPolicy("Client", policy => policy.RequireRole("Client").Build());
                 //options.AddPolicy("Admin", policy => policy.RequireRole("Admin").RequireRole("Client").Build());  // 两个都需要
                 //options.AddPolicy("SystemOrAdmin", policy => policy.RequireRole("Admin", "System").Build());   // 数组，或者
+
+                // 权限策略三大块
+                // 基于需要 Requirements 自定义策略授权
                 options.AddPolicy("MyRequirement", policy => policy.AddRequirements(new MyRequirement()));
-                options.AddPolicy("Admin", policy => policy.RequireRole("Admin").Build());
+
+                // 都是基于ClaimTypes
+                // 基于角色
+                options.AddPolicy("Admin1", policy => policy.RequireRole("Admin").Build());
+
+                // 基于Claim声明
+                options.AddPolicy("Admin2", policy => policy.RequireClaim(ClaimTypes.Role, "User").Build());
             });
 
             services.AddSingleton<IAuthorizationHandler, MyRequirementHandler>();

@@ -77,17 +77,19 @@ namespace WebApi.Extention.Authorizations
 
             var claims = new List<Claim>
             {
-                new Claim("Admin",aud),
+                new Claim(ClaimTypes.Role,"User"),
+                new Claim(ClaimTypes.Role,"Admin"),
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
+            // 3+2
             var jwt = new JwtSecurityToken(
                 issuer: iss,
                 audience: aud,
-                claims: claims,
                 signingCredentials: creds,
+                claims: claims,
                 expires: DateTime.Now.AddDays(3));
 
             return new JwtSecurityTokenHandler().WriteToken(jwt);

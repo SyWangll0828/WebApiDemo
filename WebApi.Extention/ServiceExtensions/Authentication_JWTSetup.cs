@@ -28,6 +28,7 @@ namespace WebApi.Extention.ServiceExtensions
             // 令牌验证参数
             var tokenValidationParameters = new TokenValidationParameters
             {
+                // 3 + 2
                 ValidateIssuerSigningKey = true,
                 IssuerSigningKey = signingKey,
 
@@ -38,11 +39,10 @@ namespace WebApi.Extention.ServiceExtensions
                 ValidAudience = Audience,//订阅人
 
                 ValidateLifetime = true,
-                ClockSkew = TimeSpan.FromSeconds(30),
                 RequireExpirationTime = true,
             };
 
-            // 开启Bearer认证
+            // 开启JWT Bearer认证
             services.AddAuthentication("Bearer")
              // 添加JwtBearer服务
              .AddJwtBearer(o =>
