@@ -47,6 +47,7 @@ namespace WebApi.Extention.ServiceExtensions
              // 添加JwtBearer服务
              .AddJwtBearer(o =>
              {
+                 // 配置验证参数
                  o.TokenValidationParameters = tokenValidationParameters;
                  o.Events = new JwtBearerEvents
                  {

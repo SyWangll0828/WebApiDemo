@@ -13,31 +13,43 @@
     <Compile Remove="Redis\**" />
     <Compile Remove="WebApi.Common\**" />
     <Compile Remove="WebApi.Extention\**" />
+    <Compile Remove="WebApi.IRepository\**" />
     <Compile Remove="WebApi.IServices\**" />
     <Compile Remove="WebApi.Model\**" />
+    <Compile Remove="WebApi.Repository\**" />
     <Compile Remove="WebApi.Services\**" />
     <Compile Remove="WebApiCL\**" />
+    <Compile Remove="WebApiDemo\**" />
     <Content Remove="Redis\**" />
     <Content Remove="WebApi.Common\**" />
     <Content Remove="WebApi.Extention\**" />
+    <Content Remove="WebApi.IRepository\**" />
     <Content Remove="WebApi.IServices\**" />
     <Content Remove="WebApi.Model\**" />
+    <Content Remove="WebApi.Repository\**" />
     <Content Remove="WebApi.Services\**" />
     <Content Remove="WebApiCL\**" />
+    <Content Remove="WebApiDemo\**" />
     <EmbeddedResource Remove="Redis\**" />
     <EmbeddedResource Remove="WebApi.Common\**" />
     <EmbeddedResource Remove="WebApi.Extention\**" />
+    <EmbeddedResource Remove="WebApi.IRepository\**" />
     <EmbeddedResource Remove="WebApi.IServices\**" />
     <EmbeddedResource Remove="WebApi.Model\**" />
+    <EmbeddedResource Remove="WebApi.Repository\**" />
     <EmbeddedResource Remove="WebApi.Services\**" />
     <EmbeddedResource Remove="WebApiCL\**" />
+    <EmbeddedResource Remove="WebApiDemo\**" />
     <None Remove="Redis\**" />
     <None Remove="WebApi.Common\**" />
     <None Remove="WebApi.Extention\**" />
+    <None Remove="WebApi.IRepository\**" />
     <None Remove="WebApi.IServices\**" />
     <None Remove="WebApi.Model\**" />
+    <None Remove="WebApi.Repository\**" />
     <None Remove="WebApi.Services\**" />
     <None Remove="WebApiCL\**" />
+    <None Remove="WebApiDemo\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -58,8 +70,8 @@
 
   <ItemGroup>
     <ProjectReference Include="WebApi.Extention\WebApi.Extention.csproj" />
+    <ProjectReference Include="WebApi.IRepository\WebApi.IRepository.csproj" />
     <ProjectReference Include="WebApi.IServices\WebApi.IServices.csproj" />
-    <ProjectReference Include="WebApi.Services\WebApi.Services.csproj" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>

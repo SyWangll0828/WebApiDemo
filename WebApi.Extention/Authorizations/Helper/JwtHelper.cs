@@ -75,15 +75,19 @@ namespace WebApi.Extention.Authorizations
             string aud = Appsettings.app(new string[] { "Audience", "Audience" });
             string secret = AppSecretConfig.Audience_Secret_String;
 
+            // 创建声明数组
             var claims = new List<Claim>
             {
+                // 两种方式
                 new Claim(ClaimTypes.Role,"User"),
                 new Claim(ClaimTypes.Role,"Admin"),
-            };
+                new Claim(JwtRegisteredClaimNames.Email,"")
+             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
+            // 实例化token对象
             // 3+2
             var jwt = new JwtSecurityToken(
                 issuer: iss,
@@ -92,6 +96,7 @@ namespace WebApi.Extention.Authorizations
                 claims: claims,
                 expires: DateTime.Now.AddDays(3));
 
+            // 生成token
             return new JwtSecurityTokenHandler().WriteToken(jwt);
         }
 

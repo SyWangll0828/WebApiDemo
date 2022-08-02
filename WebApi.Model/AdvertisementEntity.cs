@@ -6,6 +6,10 @@ namespace WebApi.Model
 {
     public class AdvertisementEntity
     {
+        public AdvertisementEntity()
+        {
+
+        }
         public int id { get; set; }
         public string name { get; set; }
     }

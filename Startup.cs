@@ -25,7 +25,6 @@ using WebApi.Extention.Authorizations;
 using WebApi.Extention.Middleware;
 using WebApi.Extention.ServiceExtensions;
 using WebApi.IServices;
-using WebApi.Services;
 using WebApiDemo.AOP;
 using static WebApi.Extention.Authorizations.JwtHelper;
 
@@ -72,7 +71,7 @@ namespace WebApiDemo
 
             //直接注册某一个类和接口
             //左边的是实现类，右边的As是接口
-            builder.RegisterType<AdvertisementServices>().As<IAdvertisementServices>();
+            //builder.RegisterType<AdvertisementServices>().As<IAdvertisementServices>();
 
             // Autofac它只对接口方法 或者 虚virtual方法或者重写方法override才能起拦截作用。
             builder.RegisterType<BlogLogAOP>();//可以直接替换其他拦截器！一定要把拦截器进行注册
